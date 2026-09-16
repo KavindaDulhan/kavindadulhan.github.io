@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Kavinda Kehelella</title>
+<meta name="description" content="Kavinda Kehelella — PhD candidate, Electrical and Computer Engineering, University of Maryland. Signal processing, machine learning, and natural language processing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1 class="name">Kavinda Kehelella</h1>
+
+    <div class="signal" aria-hidden="true">
+      <svg viewBox="0 0 640 40" preserveAspectRatio="none">
+        <path class="signal-path" d="M0,20 C10,20 12,4 22,4 C32,4 34,36 44,36 C54,36 56,20 66,20 L 150,20
+                                      L154,20 L158,10 L162,30 L166,20 L640,20"/>
+      </svg>
+    </div>
+
+    <nav class="nav" aria-label="Section navigation">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#misc">Misc</a>
+    </nav>
+
+    <div class="links">
+      <a href="mailto:kavindadulhan@gmail.com">Email</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/KavindaDulhan">GitHub</a>
+      <span class="sep">·</span>
+      <!-- TODO: replace with your real Google Scholar URL -->
+      <a href="https://scholar.google.com/">Scholar</a>
+      <span class="sep">·</span>
+      <!-- TODO: replace with your real LinkedIn URL -->
+      <a href="https://linkedin.com/">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="assets/CV.pdf">CV</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p>
+        I'm a PhD candidate in Electrical and Computer Engineering at the University of
+        Maryland, College Park. I started out building radar hardware that could read a hand
+        gesture from a Doppler signature, and decoding intent from calcium-imaging traces —
+        work where the signal is honest but the meaning has to be extracted carefully.
+      </p>
+      <p>
+        That habit of asking <em>what does this signal actually mean</em> has pulled me toward
+        language models: why the same question asked two different ways can get two different
+        answers, how to pass that judgment down to a smaller model through distillation, and how
+        a language model trained on chemistry text reads a molecule differently than one trained
+        on Wikipedia. I'm currently looking for research internships in NLP for
+        Summer 2027.
+      </p>
+    </section>
+
+    <hr>
+
+    <section id="news" aria-labelledby="news-h">
+      <h2 id="news-h">News</h2>
+      <ul class="news-list">
+        <li><time datetime="2026-09">Sep 2026</time> — Paper on counterfactual distillation for
+          robust question answering submitted to NeurIPS 2026; currently addressing reviewer
+          feedback.</li>
+        <li><time datetime="2026-08">Aug 2026</time> — Started a project on activation editing
+          to reduce LLM inconsistency across paraphrased questions.</li>
+        <li><time datetime="2026-06">Jun 2026</time> — Began combining ChemBERTa-2 and
+          MatSciBERT embeddings for materials-science formulation classification.</li>
+        <li><time datetime="2023-08">Aug 2023</time> — Started the PhD at UMD; awarded the
+          Graduate School Dean's Fellowship.</li>
+        <li><time datetime="2022-09">2022</time> — "Vision Transformer with Convolutional
+          Encoder-Decoder for Hand Gesture Recognition" published in <em>IEEE Sensors
+          Letters</em>.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="research" aria-labelledby="research-h">
+      <h2 id="research-h">Research</h2>
+
+      <h3 class="sub">Selected</h3>
+
+      <article class="entry">
+        <span class="tag tag-nlp">NLP</span>
+        <div class="entry-body">
+          <h4>Counterfactual distillation for robust question answering</h4>
+          <p>A knowledge-distillation framework that selects counterfactual training examples
+            to make student models less swayed by context-vs-parametric knowledge conflicts.
+            T5 teacher/student, evaluated on Natural Questions and HotpotQA.
+            <span class="status">Under review, NeurIPS 2026</span></p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="tag tag-nlp">NLP</span>
+        <div class="entry-body">
+          <h4>LLM consistency across paraphrased inputs</h4>
+          <p>Probing classifiers locate the attention heads most responsible for
+            paraphrase-induced inconsistency in LLM outputs; targeted activation edits at
+            those heads reduce it. Evaluated with representational dissimilarity analysis
+            on Gemma-2B-it over HotpotQA.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="tag tag-ml">ML</span>
+        <div class="entry-body">
+          <h4>Domain LLM embeddings for materials classification</h4>
+          <p>Combines ChemBERTa-2 (structural, from SMILES) and MatSciBERT (semantic, from
+            functional-group-enriched text) into a single embedding for biopolymer formulation
+            grade prediction.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="tag tag-sig">Signal</span>
+        <div class="entry-body">
+          <h4>Hand gesture recognition with Doppler radar</h4>
+          <p>A vision-transformer / convolutional encoder-decoder architecture recognizing
+            seven hand gestures in real time from a 24&nbsp;GHz radar system, including the
+            antenna array and beamforming hardware.
+            <span class="status">IEEE Sensors Letters, 2022</span></p>
+        </div>
+      </article>
+
+      <details class="more">
+        <summary>More projects</summary>
+
+        <article class="entry">
+          <span class="tag tag-ml">ML</span>
+          <div class="entry-body">
+            <h4>Real-time neural decoding from calcium imaging</h4>
+            <p>Integrating two prior lab systems (NDSEP, NeuroGRS) into one real-time,
+              end-to-end decoding pipeline, developed on simulated and lab-generated imaging
+              data. <span class="status">Ongoing, RNDC-Lab, UMD</span></p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <span class="tag tag-ml">ML</span>
+          <div class="entry-body">
+            <h4>Dynamic pruning via dataflow parameterization</h4>
+            <p>A parameterized channel-attention pruning method that compresses a model at
+              inference time for resource-constrained deployment, tested on ResNet50 with
+              CBAM on ImageNet.</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <span class="tag tag-nlp">NLP</span>
+          <div class="entry-body">
+            <h4>Sentiment transition in updated Amazon reviews</h4>
+            <p>Compared GPT-4, a BERT-based classifier, VADER, and fine-tuned DistilBERT on
+              revised Amazon reviews across five product categories.</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <span class="tag tag-sig">Signal</span>
+          <div class="entry-body">
+            <h4>Undergraduate projects</h4>
+            <p>Multi-rate Tx/Rx systems, diversity-combining schemes, an FPGA multi-core
+              processor, lossless data compression (Huffman / arithmetic / LZW), and several
+              embedded robotics builds — full list on request or in the CV.</p>
+          </div>
+        </article>
+
+      </details>
+    </section>
+
+    <hr>
+
+    <section id="teaching" aria-labelledby="teaching-h">
+      <h2 id="teaching-h">Teaching</h2>
+      <dl class="teaching-list">
+        <div class="teach-row">
+          <dt>2023 – present</dt>
+          <dd>Graduate Teaching Assistant, Dept. of ECE, University of Maryland —
+            ENEE440 Microprocessors, ENEE245 Digital Circuits &amp; Systems Lab,
+            ENEE408C/M Capstone Design</dd>
+        </div>
+        <div class="teach-row">
+          <dt>2022 – 2023</dt>
+          <dd>Visiting Instructor, Dept. of Electronic &amp; Telecom. Eng.,
+            University of Moratuwa — EN1094 Laboratory Practice, EN4720 Cyber Physical
+            Systems</dd>
+        </div>
+      </dl>
+    </section>
+
+    <hr>
+
+    <section id="misc" aria-labelledby="misc-h">
+      <h2 id="misc-h">Misc</h2>
+
+      <h3 class="sub">Skills</h3>
+      <p class="skills">
+        Python, PyTorch, TensorFlow, Hugging Face Transformers, C++, MATLAB, Java, Go, SQL
+      </p>
+
+      <h3 class="sub">Honors</h3>
+      <ul class="plain-list">
+        <li>Graduate School Dean's Fellowship, University of Maryland (2023)</li>
+        <li>Dean's List, 7 semesters, University of Moratuwa</li>
+        <li>Finalist, Hackstat 2.0 / SLIIT Datathon / Datastorm 1.0 (2019)</li>
+        <li>Rank 243 (world), IEEE Xtreme 14.0 (2020)</li>
+      </ul>
+
+      <h3 class="sub">Outside the lab</h3>
+      <p>Sri Lanka → College Park. Always happy to talk radar, Wishart matrices, or why an
+        LLM changed its mind.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Last updated September 2026 · Built with plain HTML and CSS ·
+      <a href="https://github.com/KavindaDulhan/kavindadulhan.github.io">source</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
