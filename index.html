@@ -15,13 +15,18 @@
 <div class="page">
 
   <header class="masthead">
-    <h1 class="name">Kavinda Kehelella</h1>
+    <div class="masthead-top">
+      <img class="portrait" src="assets/headshot.jpg" alt="Portrait of Kavinda Kehelella" width="112" height="112">
+      <div class="masthead-text">
+        <h1 class="name">Kavinda Kehelella</h1>
 
-    <div class="signal" aria-hidden="true">
-      <svg viewBox="0 0 640 40" preserveAspectRatio="none">
-        <path class="signal-path" d="M0,20 C10,20 12,4 22,4 C32,4 34,36 44,36 C54,36 56,20 66,20 L 150,20
-                                      L154,20 L158,10 L162,30 L166,20 L640,20"/>
-      </svg>
+        <div class="signal" aria-hidden="true">
+          <svg viewBox="0 0 640 40" preserveAspectRatio="none">
+            <path class="signal-path" d="M0,20 C10,20 12,4 22,4 C32,4 34,36 44,36 C54,36 56,20 66,20 L 150,20
+                                          L154,20 L158,10 L162,30 L166,20 L640,20"/>
+          </svg>
+        </div>
+      </div>
     </div>
 
     <nav class="nav" aria-label="Section navigation">
@@ -33,7 +38,7 @@
     </nav>
 
     <div class="links">
-      <a href="mailto:kavindadulhan@gmail.com">Email</a>
+      <a href="mailto:kkehelel@umd.edu">Email</a>
       <span class="sep">·</span>
       <a href="https://github.com/KavindaDulhan">GitHub</a>
       <span class="sep">·</span>
@@ -53,9 +58,10 @@
       <h2 id="about-h">About</h2>
       <p>
         I'm a PhD candidate in Electrical and Computer Engineering at the University of
-        Maryland, College Park. I started out building radar hardware that could read a hand
-        gesture from a Doppler signature, and decoding intent from calcium-imaging traces —
-        work where the signal is honest but the meaning has to be extracted carefully.
+        Maryland, College Park, advised by Prof. Sanghamitra Dutta. I started out building
+        radar hardware that could read a hand gesture from a Doppler signature, and decoding
+        intent from calcium-imaging traces — work where the signal is honest but the meaning
+        has to be extracted carefully.
       </p>
       <p>
         That habit of asking <em>what does this signal actually mean</em> has pulled me toward
@@ -72,13 +78,17 @@
     <section id="news" aria-labelledby="news-h">
       <h2 id="news-h">News</h2>
       <ul class="news-list">
-        <li><time datetime="2026-09">Sep 2026</time> — Paper on counterfactual distillation for
-          robust question answering submitted to NeurIPS 2026; currently addressing reviewer
-          feedback.</li>
+        <li><time datetime="2026-09">Sep 2026</time> — "COFFEQA: Counterfactual-Guided
+          Few-Shot Distillation for LLM Question Answering" (with Sanghamitra Dutta) submitted
+          to NeurIPS 2026; currently under review.</li>
+        <li><time datetime="2026-08">Aug 2026</time> — "RNDC-Lab: A Real-Time Calcium
+          Imaging-Based Adaptive Neural Decoding Framework" accepted for publication in
+          <em>Frontiers in Neuroscience</em>.</li>
         <li><time datetime="2026-08">Aug 2026</time> — Started a project on activation editing
           to reduce LLM inconsistency across paraphrased questions.</li>
-        <li><time datetime="2026-06">Jun 2026</time> — Began combining ChemBERTa-2 and
-          MatSciBERT embeddings for materials-science formulation classification.</li>
+        <li><time datetime="2026-06">Jun 2026</time> — Began building a unified
+          multimodal GNN-LLM framework for material property prediction, combining
+          ChemBERTa-2 and MatSciBERT embeddings.</li>
         <li><time datetime="2023-08">Aug 2023</time> — Started the PhD at UMD; awarded the
           Graduate School Dean's Fellowship.</li>
         <li><time datetime="2022-09">2022</time> — "Vision Transformer with Convolutional
@@ -97,10 +107,14 @@
       <article class="entry">
         <span class="tag tag-nlp">NLP</span>
         <div class="entry-body">
-          <h4>Counterfactual distillation for robust question answering</h4>
-          <p>A knowledge-distillation framework that selects counterfactual training examples
-            to make student models less swayed by context-vs-parametric knowledge conflicts.
-            T5 teacher/student, evaluated on Natural Questions and HotpotQA.
+          <h4>COFFEQA: counterfactual-guided few-shot distillation for LLM QA</h4>
+          <p>A few-shot knowledge-distillation framework that pairs factual examples with
+            counterfactuals to improve knowledge transfer in open-domain question answering.
+            Introduces the Context Following Distillation (CFD) metric, which validates
+            generated counterfactuals using teacher context-dependence and answer agreement.
+            Evaluated across eight QA benchmarks with T5 and Qwen2.5 teacher-student pairs,
+            including analysis of teacher-student agreement and distillation near the
+            teacher's decision boundary.
             <span class="status">Under review, NeurIPS 2026</span></p>
         </div>
       </article>
@@ -119,10 +133,13 @@
       <article class="entry">
         <span class="tag tag-ml">ML</span>
         <div class="entry-body">
-          <h4>Domain LLM embeddings for materials classification</h4>
-          <p>Combines ChemBERTa-2 (structural, from SMILES) and MatSciBERT (semantic, from
-            functional-group-enriched text) into a single embedding for biopolymer formulation
-            grade prediction.</p>
+          <h4>A unified multimodal GNN-LLM framework for material property prediction</h4>
+          <p>An embedding pipeline for biopolymer property prediction combining ChemBERTa-2
+            (structural, from SMILES) and MatSciBERT (semantic), via a substructure-to-text
+            generation step that encodes per-component chemistry and inter-component
+            interactions into natural language — improving on a GNN-only baseline. Currently
+            exploring an AI-agent system to strengthen the framework's reasoning.
+            <span class="status">Ongoing</span></p>
         </div>
       </article>
 
@@ -143,10 +160,11 @@
         <article class="entry">
           <span class="tag tag-ml">ML</span>
           <div class="entry-body">
-            <h4>Real-time neural decoding from calcium imaging</h4>
+            <h4>RNDC-Lab: real-time calcium imaging-based adaptive neural decoding</h4>
             <p>Integrating two prior lab systems (NDSEP, NeuroGRS) into one real-time,
-              end-to-end decoding pipeline, developed on simulated and lab-generated imaging
-              data. <span class="status">Ongoing, RNDC-Lab, UMD</span></p>
+              end-to-end decoding pipeline, tested on both simulated and real-world two-photon
+              calcium imaging data.
+              <span class="status">Frontiers in Neuroscience, 2026</span></p>
           </div>
         </article>
 
@@ -172,10 +190,14 @@
         <article class="entry">
           <span class="tag tag-sig">Signal</span>
           <div class="entry-body">
-            <h4>Undergraduate projects</h4>
-            <p>Multi-rate Tx/Rx systems, diversity-combining schemes, an FPGA multi-core
-              processor, lossless data compression (Huffman / arithmetic / LZW), and several
-              embedded robotics builds — full list on request or in the CV.</p>
+            <h4>RF wireless sensing using micro-Doppler signatures</h4>
+            <p>A 2.45&nbsp;GHz ISM-band Doppler radar system with directional sensing,
+              recognizing seven hand gestures in real time at over 94% accuracy — including
+              the patch-antenna transmitter, a four-antenna receive array with Butler-matrix
+              beamforming, and a convolutional encoder-decoder / transformer / MLP recognition
+              pipeline. Undergraduate thesis work; a smaller set of related coursework
+              projects (Tx/Rx systems, an FPGA multi-core processor, lossless compression) is
+              in the CV.</p>
           </div>
         </article>
 
@@ -195,7 +217,7 @@
         </div>
         <div class="teach-row">
           <dt>2022 – 2023</dt>
-          <dd>Visiting Instructor, Dept. of Electronic &amp; Telecom. Eng.,
+          <dd>Visiting Teaching Assistant, Dept. of Electronic &amp; Telecom. Eng.,
             University of Moratuwa — EN1094 Laboratory Practice, EN4720 Cyber Physical
             Systems</dd>
         </div>
@@ -209,15 +231,18 @@
 
       <h3 class="sub">Skills</h3>
       <p class="skills">
-        Python, PyTorch, TensorFlow, Hugging Face Transformers, C++, MATLAB, Java, Go, SQL
+        Python, C++, MATLAB, Java, Go, C · PyTorch, TensorFlow, Hugging Face, scikit-learn,
+        Keras · Git, Jupyter, SQL (PostgreSQL, MySQL), JIRA, Confluence
       </p>
 
       <h3 class="sub">Honors</h3>
       <ul class="plain-list">
         <li>Graduate School Dean's Fellowship, University of Maryland (2023)</li>
-        <li>Dean's List, 7 semesters, University of Moratuwa</li>
-        <li>Finalist, Hackstat 2.0 / SLIIT Datathon / Datastorm 1.0 (2019)</li>
-        <li>Rank 243 (world), IEEE Xtreme 14.0 (2020)</li>
+        <li>Finalist, Hackstat 2.0 — ML/Data Science Competition, University of Colombo (2019)</li>
+        <li>Finalist, SLIIT Datathon — Data Science Competition (2019)</li>
+        <li>Finalist, Datastorm 1.0 — ML/Data Science Competition, University of Moratuwa (2019)</li>
+        <li>Ranked 243rd (world), IEEE Xtreme 14.0 (2020); ranked 489th (world), IEEE Xtreme 13.0 (2019)</li>
+        <li>Mahapola Merit Scholarship, Government of Sri Lanka (2017)</li>
       </ul>
 
       <h3 class="sub">Outside the lab</h3>

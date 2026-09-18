@@ -61,6 +61,23 @@ h1, h2, h3, h4 {
 
 .masthead { margin-bottom: 3rem; }
 
+.masthead-top {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.portrait {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--rule);
+}
+
+.masthead-text { min-width: 0; }
+
 .name {
   font-size: 2.4rem;
   font-weight: 600;
@@ -314,6 +331,8 @@ footer a:hover { color: var(--accent); }
 
 @media (max-width: 480px) {
   .name { font-size: 1.9rem; }
+  .masthead-top { gap: 1rem; }
+  .portrait { width: 76px; height: 76px; }
   .entry { grid-template-columns: 1fr; }
   .tag { justify-self: start; }
   .teach-row { grid-template-columns: 1fr; }
